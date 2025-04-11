@@ -16,6 +16,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
+@EnableTransactionManagement
 public class HibernateConfig {
 
 	private Environment env;
@@ -50,7 +51,7 @@ public class HibernateConfig {
         Properties properties = new Properties();
         // properties.put("hibernate.current_session_context_class", 
         //         "org.springframework.orm.hibernate5.SpringSessionContext");
-        properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        // properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         properties.put("hibernate.show_sql", true);
         properties.put("hibernate.format_sql", true);
         properties.put("hibernate.hbm2ddl.auto", "none");
